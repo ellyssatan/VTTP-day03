@@ -1,5 +1,7 @@
 package mypackage;
 
+import java.util.Random;
+
 public class ChristmasTree {
     public static void main(String[] args) {
         
@@ -13,14 +15,20 @@ public class ChristmasTree {
         */
         int rows = Integer.parseInt(args[0]);
         int height = 1;
+        String[] array = {"*", "o", "u", "c"};
+
 
         // controls height (num of blocks)
         for (int h = 0; h < height; h++) {
             // loop through rows
-            for (int r = 0; r < rows; r++) {
+            for (int r = 1; r <= rows; r++) {
                 // number in rows
-                for (int c = 0; c < r + 1; c++){
-                    System.out.print("*");
+                for (int c = 0; c < rows - r; c++){
+                    System.out.print(" ");
+                }
+                for (int c = 0; c < 2 * r - 1; c++){
+                    int rnd = new Random().nextInt(array.length);
+                    System.out.print(array[rnd]);
                 }
                 System.out.println();
             }

@@ -1,6 +1,6 @@
 package mypackage;
 
-public class Honda extends Car implements Controllable {
+public class Honda extends Car {
     
     public Honda() {
         this.setMake("honda");

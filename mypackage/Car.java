@@ -1,7 +1,7 @@
 package mypackage;
 
 // Class
-public class Car {
+public class Car implements Controllable {
     // Properties / members
     private String color;
     protected String make;
